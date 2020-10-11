@@ -126,19 +126,21 @@ function checkCookie(cname) {
         }
 }
 
-var idname = "ekustatscript12";
-// MAIN
-if(document.getElementById(idname) == null){
+function run(){
+    var idname = "ekustatscript12";
+    // MAIN
+    if(document.getElementById(idname) == null){
 
-    var tab1 = document.getElementById("in1").getElementsByTagName("table")[0];
-    var tab2 = document.getElementById("in2").getElementsByTagName("table")[0];
-    var tab3 = document.getElementById("in3").getElementsByTagName("table")[0];
-    var tabs = [tab1, tab2, tab3];
-    tabs.forEach(e => addCells(e));
-    tabs.forEach(e => writeCol(e, 6, getKills(e)));
-    tabs.forEach(e => writeCol(e, 7, getDeaths(e)));
-    var html = document.getElementsByTagName("html")[0];
-    var span = document.createElement("span");
-    span.setAttribute("id", idname);
-    html.appendChild(span);
+        var tab1 = document.getElementById("in1").getElementsByTagName("table")[0];
+        var tab2 = document.getElementById("in2").getElementsByTagName("table")[0];
+        var tab3 = document.getElementById("in3").getElementsByTagName("table")[0];
+        var tabs = [tab1, tab2, tab3];
+        tabs.forEach(e => addCells(e));
+        tabs.forEach(e => writeCol(e, 6, getKills(e)));
+        tabs.forEach(e => writeCol(e, 7, getDeaths(e)));
+        var html = document.getElementsByTagName("html")[0];
+        var span = document.createElement("span");
+        span.setAttribute("id", idname);
+        html.appendChild(span);
+    }
 }
