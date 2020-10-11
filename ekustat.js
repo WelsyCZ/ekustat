@@ -144,3 +144,4 @@ function run(){
         html.appendChild(span);
     }
 }
+run();
